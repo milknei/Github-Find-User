@@ -10,11 +10,11 @@ searchInput.onkeyup = (e) => {
     github.getUser(inputText).then((user) => {
       if (user.message === "Not Found") {
         ui.showAlert(`User: ${inputText} not found`, "alert-danger");
+        ui.clearProfile();
       } else {
         ui.showProfile(user);
         ui.clearAlert();
       }
-
       return user;
     });
   } else {

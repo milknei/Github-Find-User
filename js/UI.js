@@ -37,9 +37,9 @@ class UI {
     // clear any alert
     this.clearAlert();
 
-    const alert = `<div class="${className}">${message}</div>`;
+    const alert = `<div class="text-white px-2 py-1 rounded ${className}">${message}</div>`;
 
-    this.searchContainer.insertAdjacentHTML("afterbegin", alert);
+    this.searchContainer.insertAdjacentHTML("beforeend", alert);
 
     setTimeout(() => this.clearAlert(), 2000);
   }
